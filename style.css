@@ -1,0 +1,142 @@
+* {
+    margin: 0; /*Aqui a gente define uma Margim para o nosso projeto*/
+    padding: 0; /*Aqui a gente define um preenchimento para o nosso projeto*/
+    box-sizing: border-box; /*Esse comando vai fazer o navgador ultilizar todo o tamanho de um elemento, levando em consideração a largura e a altura das bordas e do preenchimento (padding), além do conteúdo real
+                              Pois os vanegadores ultilizam de forma quebrada... Ex: Tamanho real: 100px, Bordas: 2px, Padding: 30px... Os navegadores irão tratar isso como: 100px + 2px + 30px = 132px... Usando 
+                              o "box-sizing: border-box;" os navegadores vão ultilizar diretamente os 132px, como sendo o tamanho total do elemento, facilitando assim na hora de organizar e tornar o projeto respansivo*/
+    font-family: "Oswald", sans-serif; /*Fonte do projeto*/
+    font-weight: 400;
+}
+
+.div-mae {
+    height: 100vh; /*Esse comando define que o projeto ocupará todo a altura da página*/
+    width: 100vw;  /*Esse comando define que o projeto ocupará todo a largura da página*/
+}
+
+.section-1 {
+    display: inline-block; /*Esse comando define a distribuição dos elementos na página, nesse caso eles ficarão em caixas alinhadas*/
+    width: 60%; /*Esse comando nos mostra que a largura dessa div sera de 60% em relação a página, ou seja, vai ocupar um alargura de 60%*/
+    margin-top: 10%; /*Margem de cima*/
+    padding-left: 136px; /*Preenchimento da esquerda, os elementos irão de mover para a direita*/
+}
+
+h1 {
+    font-size: 70px; /*Tamanho da Fonte*/
+    line-height: 100px; /*Espaçamento verical entre as linhas*/
+    color: #5D5D7D; /*Cor da fonte*/
+    width: 368px;
+}
+
+p {
+    font-size: 28px; /*Tamanho da Fonte*/
+    line-height: 48px; /*Espaçamento verical entre as linhas*/
+    color: #5D5D7D; /*Cor do texto*/
+    opacity: 0.6; /*Opacidade to texto*/
+    margin: 15px 0; /*Margem de 15px para cima e baixo, e dos lados de 0px... esse é um atalho, se colocarmos apenas 2 valores, o primeiro sera de cima e baixo e o segundo dos lados...*/
+    width: 540px;
+}
+
+button {
+    background-color: #9499EA; /*Cor de fundo do botão*/
+    border: none; /*Tira a borda*/
+    width: 269px; /*Largura do botão*/
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959); /*Sombra do botão*/
+    height: 62px; /*Altura do botão*/
+    font-size: 24px; /*Tamanho do texto do botão*/
+    line-height: 35.57px; /*Espaço entre as linhas na verical*/
+    color: #FFFFFF; /*Cor do texto do botão*/
+    border-radius: 30px; /*Formato da borda do botão*/
+    text-align: center; /*Texto alinhado ao centro do botão*/
+    cursor: pointer; /*Ao passar o mause em cima do botão, o mause ficará uma mãozinha*/
+}
+
+button:hover {
+    opacity: 0.8;
+    /*Quando o mause passar em cima o botão ficara com a opacidade de 0.8*/
+}
+
+button:active {
+    background-color: rgb(135, 231, 135);
+    color: rgb(0, 0, 0);
+    opacity: 0.5;
+    /*Quando o usiário clicar no botão, ficará com o opacity de 0.5 trocará a cor do botão para verde clat e a cor do texto para preto*/
+}
+
+.section-2 {
+    display: inline-block; /*Esse comando define a distribuição dos elementos na página, nesse caso eles ficarão em caixas alinhadas*/
+
+    /* background-color: #5D5D7D;  */
+    /* opacity: 0.16; */
+    /* Nessa parte do código se colocarmos apenas a cor em Hexadecimal, não dará certo, pois no projeto essa cor tem um "opacity: 0.16;"... Se colocarmos separado, esse opacyti ficara para toda a div... para corrigir isso podemos colocar em RGB e atribuir outo valor(Opacity) transformando-o em RGBA*/
+    /*Então vamos nesse site:"https://www.peko-step.com/pt/tool/tfcolor.html" e trocamos a cor hexadecimal para RGB e adicionamos o Opacity ficando RGBA */
+
+    background-color: rgba(93, 93, 125, 0.16);
+    height: 100vh; /*Define que a div ocuraá todo a altura dela na página*/
+    position: absolute; /*Posição do elemento na página*/
+    right: 0; /*Posição do elemento a 0px da direita*/
+    width: 40%; /*Tamanho de 40% da div*/
+}
+
+img {
+    Width: 406px; /*Largura*/
+    Height: 452.95px; /*Altura*/
+    position: relative; /*Posição*/
+    top: 17%; /*Posição 17% em relação ao topo*/
+    right: 108px; /*Posição 108px em relação a direita*/
+}
+
+.link-header {
+    font-size: 28px; /*Tamanho do texto*/
+    line-height: 41.5px; /*Espaçamento vertical entre as linhas*/
+    color: #5D5D7D; /*Cor do texto*/
+    margin-right: 41px; /*Espaço a direita, ou seja, o conteúdo será modido a esquerda apartir dos 41px*/
+}
+
+.link-header:nth-child(2) {
+    opacity: 0.4; /*Apenas o 2°elemento ficara com opacity o.4*/
+}
+
+.link-header:active {
+    color: rgb(13, 117, 13); /*Ao clicar no elemento mudará a cor*/
+    opacity: 0.5; /*Ao clicar no elemento ele ficara com opacity 0.5*/
+}
+
+header {
+    margin: 24px 0 0 57px;  /*Adicionando uma margem a uma div... esse é um atalho... Chamado relódio, o primeiro numero será 12 horas(Cima), o segundo 15horas(Direita), o terceiro será 18horas(Baixo) e o ultomo será 21horas(Esquerda)...*/
+}
+
+@media screen and (max-width: 900px) {
+    .section-1 {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto;
+        margin: 120px 100px 0 170px
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .section-2 {
+        display: block;
+        position: static;
+        width: 100%;
+    }
+
+    img {
+        position: static;
+    }
+
+    header {
+        display: none;
+    }
+}
